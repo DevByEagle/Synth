@@ -1,20 +1,24 @@
 cmake_minimum_required(VERSION 3.10)
-project(Synthix VERSION 1.0)
+project(Synth VERSION 1.0)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(SOURCES
-    src/synthix.cpp
+    src/synth.cpp
+    src/basetypes.cpp
 )
 
 add_library(${CMAKE_PROJECT_NAME} SHARED ${SOURCES})
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME "Synth"
+    OUTPUT_NAME "synth"
     PREFIX ""
 )
 
-target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE SYNTH_API)
+if(WIN32)
+    target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE EXPORTS)
+endif()
+
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 # target_link_libraries(${CMAKE_PROJECT_NAME} SomeOtherLibrary)
@@ -33,16 +37,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     endif()
 endif()
 
-if(WIN32)
-    install(TARGETS ${CMAKE_PROJECT_NAME}
-        RUNTIME DESTINATION bin  # For DLL file
-    )
-
-    install(DIRECTORY include/
-        DESTINATION include  # For headers
-    )
-
-elseif(UNIX AND NOT APPLE)
+if (UNIX AND NOT APPLE)
     install(TARGETS ${CMAKE_PROJECT_NAME}
         LIBRARY DESTINATION lib  # For .so file
     )
