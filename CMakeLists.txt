@@ -3,10 +3,9 @@ project(Synth VERSION 1.0)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(SOURCES
-    src/synth.cpp
-    src/basetypes.cpp
-)
+set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
+
+file(GLOB SOURCES "${SRC_DIR}/*.cpp")
 
 add_library(${CMAKE_PROJECT_NAME} SHARED ${SOURCES})
 
