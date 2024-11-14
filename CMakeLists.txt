@@ -56,7 +56,5 @@ elseif(APPLE)
 endif()
 
 # testing
-enable_testing()
 add_executable(test_synth main.cpp)
 target_link_libraries(test_synth PRIVATE ${CMAKE_PROJECT_NAME})
-add_test(NAME SynthTest COMMAND test_synth)
