@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
-project(Synth VERSION 1.0)
+project(Synth VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
 set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 
 file(GLOB SOURCES "${SRC_DIR}/*.cpp")
@@ -55,3 +54,9 @@ elseif(APPLE)
     )
 
 endif()
+
+# testing
+enable_testing()
+add_executable(test_synth main.cpp)
+target_link_libraries(test_synth PRIVATE ${CMAKE_PROJECT_NAME})
+add_test(NAME SynthTest COMMAND test_synth)
