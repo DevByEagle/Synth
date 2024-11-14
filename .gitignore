@@ -4,3 +4,6 @@
 
 # Paths
 build/*
+
+# Files
+main.cpp
