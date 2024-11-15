@@ -57,7 +57,3 @@ elseif(APPLE)
         DESTINATION include  # For headers
     )
 endif()
-
-# Testing executable
-add_executable(test_synth main.cpp)
-target_link_libraries(test_synth PRIVATE ${CMAKE_PROJECT_NAME})
