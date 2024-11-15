@@ -1,0 +1,15 @@
+name: Build Tasks
+
+on:
+  push:
+    branchs:
+      - master
+    pull_request:
+      branchs:
+      - master
+
+jobs:
+  build-linux:
+
+  build-windows:
+    runs-on: windows-lat  
