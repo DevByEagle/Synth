@@ -17,10 +17,8 @@
 
 namespace Synth {
     // Types
-    typedef unsigned int size_t;
-
-    // Functions 
-    void SYNAPI delay(size_t secends);
+    
+    // Functions
     
     // Classes
 }
