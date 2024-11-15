@@ -57,3 +57,5 @@ elseif(APPLE)
         DESTINATION include  # For headers
     )
 endif()
+
+#target_precompile_headers(${CMAKE_PROJECT_NAME} PRIVATE include/pch.h)
