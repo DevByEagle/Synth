@@ -4,9 +4,7 @@
 #include "types.h"
 
 namespace Synth {
-    // Functions
-    
-    // Classes
+    // Functions & Classes
 }
 
 #endif // SYNTH_H

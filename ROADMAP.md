@@ -8,4 +8,3 @@ This roadmap outlines the key milestones and goals for the development of the pr
 - [ ] **Core**: Add the core features.
 - [ ] **Platforms**: Add support for more platforms (e.g., macOS, embedded systems)
 - [ ] **Documentation**: Expand and improve example explanations
-- [ ] **Testing**: Develop automated tests for better reliabilit
