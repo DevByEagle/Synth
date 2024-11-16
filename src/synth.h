@@ -1,13 +1,15 @@
 #ifndef SYNTH_H
 #define SYNTH_H
 
+#include "pch.h"
 #include "typing.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-string getdevice();
+/** @brief Quits the program with a status code.  */
+void quit(int status);
 
 #ifdef __cplusplus
 }

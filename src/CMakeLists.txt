@@ -31,6 +31,8 @@ endif()
 
 file(COPY ${synth_public_headers} DESTINATION "include")
 
+target_precompile_headers(${PROJECT_NAME} PRIVATE pch.h)
+
 include(CPack)
 
 enable_testing()

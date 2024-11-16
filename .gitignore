@@ -8,4 +8,4 @@
 build/*
 
 # Files
-main.cpp
+main.c
