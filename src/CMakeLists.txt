@@ -1,10 +1,14 @@
 project(Synth C)
 set(PROJECT_VERSION 1.0.0)
 
-option(BUILD_SHARED_LIBS "Build a shared libaray" ON)
+option(BUILD_SHARED_LIBS "Build a shared libaray" OFF)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED True)
 
 set(synth_public_headers
     synth.h
+    typing.h
     )
 
 file(GLOB SOURCES "*.cpp" "*.c")

@@ -1,6 +1,8 @@
 # OS
 *.dll
 *.exe
+*.a
+*.so
 
 # Paths
 build/*
